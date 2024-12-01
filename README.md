@@ -1,133 +1,132 @@
-# Документация проекта "Интернет-магазин товаров для дома и сада" (Garden Products)
+# Dokumentation des Projekts „Online Shop für Haus- und Gartenprodukte“ (Gartenprodukte)
 
-# Название проекта
+# Projektname
 
-"Интернет-магазин товаров для дома и сада" (Garden Products)
+„Online-Shop für Haus- und Gartenprodukte“ (Gartenprodukte)
 
-# Ссылки на макет, ТЗ или требования, задеплоенную реализацию
+# Verweise auf das Layout, TOR oder Anforderungen, die endgültige Umsetzung
 
-Макет: [Figma](https://www.figma.com/file/SDNWLzCWkh9ZXdCpWEaByv/project-frontend?type=design&node-id=280-1136&mode=design&t=NJTGdloftvn8I6Vz-0)
+Layout: [Figma](https://www.figma.com/file/SDNWLzCWkh9ZXdCpWEaByv/project-frontend?type=design&node-id=280-1136&mode=design&t=NJTGdloftvn8I6Vz-0)
 
-Техническое задание (ТЗ): [Google Docs](https://docs.google.com/document/d/1j4GO3_P2-h80rrrUuVHan2i8saFXPJlk/edit)
+Aufgabenbereich : [Google Docs](https://docs.google.com/document/d/1j4GO3_P2-h80rrrUuVHan2i8saFXPJlk/edit)
 
-Задеплоенная реализация: [GardenStore](https://project-garden.onrender.com)
+Eingesetzte Realisation: [GardenStore](https://project-garden.onrender.com)
 
-# Общее описание
+# Allgemeine Beschreibung
+Bei dem Projekt handelt es sich um eine Webanwendung für einen Online-Shop für Haus- und Gartenprodukte. Ziel ist es, den Nutzern eine benutzerfreundliche Schnittstelle zur Verfügung zu stellen, um Produkte anzusehen, sie zu kategorisieren, in den Warenkorb zu legen und eine Bestellung aufzugeben.
 
-Проект представляет собой веб-приложение для интернет-магазина товаров для дома и сада. Целью является предоставление пользователям удобного интерфейса для просмотра товаров, их категоризации, добавления в корзину и оформления заказа.
+# Die wichtigsten Funktionen des Projekts
 
-# Основной функционал проекта
+Hauptseite:
+ - Anzeige einer Liste von 4 Kategorien.
+ - 5%-Rabatt-Formular: Validierung der Eingabedaten auf der Client-Seite unter Verwendung der React Hook Form-Bibliothek.
+ - Anzeige von 4 zufälligen rabattierten Produkten.
+ - 
+Modales Fenster „Produkt des Tages“:
+ - Wird in der Kopfzeile platziert und von jeder Seite aus geöffnet.
+ - Das Fenster zeigt ein zufälliges Produkt mit einem Rabatt von 50 % an.
+ - Vom modalen Fenster aus kann das Produkt in den Warenkorb gelegt werden.
+ - Nach dem Schließen des modalen Fensters bleibt der Benutzer auf derselben Seite, von der aus er geklickt hat.
 
-Главная страница:
- - Отображение списка из 4-х категорий.
- - Форма на получение скидки 5%: Валидация вводимых данных на клиентской стороне с использованием библиотеки React Hook Form.
- - Отображение 4 случайных товаров со скидкой.
+Produktkategorien:
+ - Zeigen Sie eine Liste aller verfügbaren Produktkategorien an.
+ - Durch Anklicken der Kategoriekarte gelangen Sie in den Abschnitt Waren nach Kategorie für die ausgewählte Kategorie.
 
-Модальное окно "Товар дня":
- - Размещено в хедере, открывается с любой страницы.
- - В окне отображается случайный товар со скидкой 50%.
- - Из модального окна товар можно добавить в корзину.
- - После закрытия модального окна пользователь остается на той же странице, с которой кликал.
-
-Категории товаров:
- - Просмотр списка всех доступных категорий товаров.
- - Переход в раздел "Товары по категориям" для выбранной категории при клике на карточку категории.
-
-Товары по категориям:
- - Отображение списка товаров в выбранной категории.
- - Возможность сортировки товаров (по умолчанию, по убыванию цены, по возрастанию цены, по алфавиту).
- - Возможность фильтрации товаров (по наличию скидки и по диапазону цен).
- - Переход к подробному описанию конкретного товара при клике на карточку товара.
+Waren nach Kategorie:
+ - Zeigen Sie eine Liste der Produkte in der ausgewählten Kategorie an.
+ - Möglichkeit, Produkte zu sortieren (standardmäßig, nach absteigendem Preis, nach aufsteigendem Preis, in alphabetischer Reihenfolge).
+ - Möglichkeit, Produkte zu filtern (nach Rabatt und nach Preisspanne).
+ - Durch Anklicken der Produktkarte gelangen Sie zur detaillierten Beschreibung eines bestimmten Produkts.
  
-Все товары:
- - Отображение полного списка товаров.
- - Возможность сортировки товаров (по умолчанию, по убыванию цены, по возрастанию цены, по алфавиту).
- - Возможность фильтрации товаров (по наличию скидки и по диапазону цен).
+Alle Produkte:
+ - Anzeige der vollständigen Liste der Produkte.
+ - Möglichkeit, Produkte zu sortieren (standardmäßig, nach absteigendem Preis, nach aufsteigendem Preis, in alphabetischer Reihenfolge).
+ - Möglichkeit, Produkte zu filtern (nach Rabatt und nach Preisspanne).
+   
+Ermäßigte Produkte:
+ - Anzeige einer Liste mit rabattierten Artikeln.
+ - Möglichkeit, Produkte zu sortieren (standardmäßig, absteigender Preis, aufsteigender Preis, alphabetisch).
+ - Möglichkeit, Produkte nach Preisspanne zu filtern.
 
-Товары со скидкой:
- - Отображение списка товаров со скидкой.
- - Возможность сортировки товаров (по умолчанию, по убыванию цены, по возрастанию цены, по алфавиту).
- - Возможность фильтрации товаров по диапазону цен.
+Bevorzugte Produkte:
+ - Zeigt eine Liste der bevorzugten Produkte an (Produkte, die gefallen haben).
+ - Möglichkeit, Produkte zu sortieren (standardmäßig absteigend nach Preis, aufsteigend nach Preis, alphabetisch).
+ - Möglichkeit, Produkte zu filtern (nach Preisspanne).
 
-Избранные товары:
- - Отображение списка избранных товаров (те, которым поставлен лайк).
- - Возможность сортировки товаров (по умолчанию, по убыванию цены, по возрастанию цены, по алфавиту).
- - Возможность фильтрации товаров (по диапазону цен).
+Ausführliche Beschreibung des Produkts:
+ - Vollständige Informationen über das ausgewählte Produkt (Name, Preis, Beschreibung, Bilder).
+ - Möglichkeit, ein Produkt in den Warenkorb zu legen.
 
-Подробное описание товара:
- - Полная информация о выбранном товаре (название, цена, описание, изображения).
- - Возможность добавления товара в корзину.
+Warenkorb:
+ - Anzeige der Liste der ausgewählten Waren mit ihrer Menge und dem Gesamtpreis.
+ - Möglichkeit, die Menge der Waren zu ändern und Waren aus dem Warenkorb zu entfernen.
+ - Berechnung und Anzeige der Gesamtkosten der Waren im Warenkorb.
+ - Möglichkeit zum Senden von Bestelldaten beim Absenden eines Formulars.
 
-Корзина:
- - Отображение списка выбранных товаров с их количеством и общей стоимостью.
- - Возможность изменения количества товаров, удаления товаров из корзины.
- - Расчет и отображение общей стоимости товаров в корзине.
- - Возможность отправки данных о заказе при отправке формы.
+Seite nicht gefunden:
+ - Zeigt eine Seite mit einer Meldung an, dass die angeforderte Seite nicht gefunden wurde.
+ - Möglichkeit, zur Startseite zurückzukehren.
 
-Страница не найдена:
- - Отображение страницы с сообщением о том, что запрашиваемая страница не найдена.
- - Возможность вернуться на главную страницу.
+Seiten-Skelett (Loader):
+ - Beim Laden der Seiten „Alle Produkte“, „Lieblingsprodukte“, „Rabattierte Produkte“ und „Produkte nach Kategorie“ wird ein Seitenskelett angezeigt, bevor die Produkte auf den Seiten erscheinen.
 
-Скелетон страницы (Loader):
- - При загрузке страниц “Все товары”, “Избранные товары”, “Товары со скидкой”, “Товары по категориям” до появления товаров на страницах виден скелетон страницы.
+Dunkles Thema:
+ - Wechselt zu einem dunklen Thema. Alle Seiten nehmen das Aussehen des Themas an.
+ - Das ausgewählte Thema wird im lokalen Speicher gespeichert.
 
-Темная тема:
- - Переключение на темную тему. Все страницы принимают внешний вид темы.
- - Выбранная тема сохраняется в Local Storage.
+Mobile Anpassungsfähigkeit: 
+ - Die Anwendung wird auf verschiedenen Geräten entsprechend dem Layout korrekt angezeigt.
 
-Мобильная адаптивность: 
- - Приложение корректно отображаеться на различных устройствах согласно макету.
+# Technologie-Stack
 
-# Стек технологий
+React: Das wichtigste Framework für die UI-Entwicklung. Es wird für die Erstellung von Komponenten und die Verwaltung des Zustands der Anwendung verwendet.
+Redux Toolkit: Verwaltung des Anwendungsstatus. Bietet eine zentralisierte Zustandsspeicherung und vereinfacht den Datentransfer zwischen Komponenten.
+React Router: Routing in der Anwendung. Wird verwendet, um die Navigation zwischen Seiten zu erstellen.
+Styled Components: Stilisierung von Komponenten. Ermöglicht die Erstellung und Verwaltung von CSS-Styles innerhalb von JavaScript.
+Git und GitHub: Versionskontrollsystem und Codehosting. Dient der Verwaltung von Codeänderungen und der Zusammenarbeit an einem Projekt.
 
-React: Основной фреймворк для разработки пользовательского интерфейса. Используется для создания компонентов и управления состоянием приложения.
-Redux Toolkit: Управление состоянием приложения. Обеспечивает централизованное хранение состояния и упрощает передачу данных между компонентами.
-React Router: Маршрутизация в приложении. Используется для создания навигации между страницами.
-Styled Components: Стилизация компонентов. Обеспечивает создание и управление CSS-стилями внутри JavaScript.
-Git и GitHub: Система контроля версий и хостинг кода. Используются для управления изменениями в коде и совместной работы над проектом.
-
-# Авторы проекта
+# Die Autoren des Projekts:
 
 # Olha Litvinova
 
-Ссылка на LinkedIn: https://www.linkedin.com/in/olha-litvinova-830318287/
-Ссылка на GitHub: https://github.com/LitvinovaOlha1905?tab=repositories
+Link für LinkedIn: https://www.linkedin.com/in/olha-litvinova-830318287/
+Link für GitHub: https://github.com/LitvinovaOlha1905?tab=repositories
 
-Реализованные фичи:
- - Главная страница: Реализация логики для отображения 4 случайных товаров со скидкой.
- - Все товары
- - Товары со скидкой
- - Избранные товары
- - Мобильная адаптивность
- - Код ревью
-
+Implementierte Fiches:
+ - Startseite: Implementieren Sie die Logik, um 4 zufällige rabattierte Produkte anzuzeigen.
+ - Alle Produkte
+ - Ermäßigte Produkte
+ - Bevorzugte Produkte
+ - Mobile Anpassungsfähigkeit
+ - Code überprüfen
+   
 # Irina Kaschkarov
+Link für LinkedIn: https://www.linkedin.com/in/irina-kaschkarov-baba3a312/
+Link für GitHub:  https://github.com/IKaschkarov?tab=repositories
 
-Ссылка на GitHub: https://github.com/IKaschkarov?tab=repositories
-
-Реализованные фичи:
- - Главная страница: Отображение списка из 4-х категорий.
- - Модальное окно "Товар дня"
- - Темная тема
- - Категории товаров
- - Товары по категориям
- - Подробное описание товара
- - Футер страницы
+Implementierte Funktionen:
+ - Startseite: Anzeige einer Liste von 4 Kategorien.
+ - Modales Fenster „Produkt des Tages
+ - Dunkles Thema
+ - Produkt-Kategorien
+ - Produkte nach Kategorie
+ - Detaillierte Beschreibung der Produkte
+ - Fußzeile der Seite
 
 # Olena Mykhaylenko
 
-Ссылка на GitHub: https://github.com/OlenaMykhaylenko?tab=repositories
+Link für GitHub: https://github.com/OlenaMykhaylenko?tab=repositories
 
-Реализованные фичи:
- - Главная страница: Создание формы для получения скидки 5%
- - Корзина
- - Скелетон страницы (Loader)
+Implementierte Fiches:
+ - Startseite: Erstellen Sie ein Formular, um 5% Rabatt zu erhalten
+ - Korb
+ - Skelettseite (Loader)
 
 # Anna Tkachenko
 
-Ссылка на GitHub: https://github.com/acroanny?tab=repositories
+Link für GitHub: https://github.com/acroanny?tab=repositories
 
-Реализованные фичи:
- - Хедер
- - Модальное окно навигации при размерах экрана 360px и 480px 
- - Страница не найдена
+Implementierte Funktionen:
+ - Kopfzeile
+ - Modales Navigationsfenster für 360px und 480px Bildschirmgröße 
+ - Seite nicht gefunden
